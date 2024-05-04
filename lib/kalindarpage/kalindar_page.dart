@@ -10,7 +10,7 @@ class KalinPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      // appBar: AppBar(),
 
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -140,7 +140,13 @@ class KalinPage extends StatelessWidget {
                 Container(
                   height: 133,
                   width: 330,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.orange),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.orangeAccent.shade100, Colors.orangeAccent],),
+
+                      borderRadius: BorderRadius.circular(20),color: Colors.orange),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
 
@@ -219,6 +225,7 @@ class KalinPage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 30),
 
 
 
@@ -228,15 +235,21 @@ class KalinPage extends StatelessWidget {
                 const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text("9AM",style: AppTextStyle.headline,),
+                    Text("11AM",style: AppTextStyle.headline,),
                     SizedBox(height: 50),
-                    Text("10AM",style: AppTextStyle.headline,),
+                    Text("12:00AM",style: AppTextStyle.headline,),
                   ],
                 ),
                 Container(
                   height: 133,
                   width: 330,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.orange),
+                  decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [Colors.lightBlue.shade100, Colors.blueAccent],),
+                      borderRadius:
+                  BorderRadius.circular(20),color: Colors.blue),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
 
@@ -278,6 +291,7 @@ class KalinPage extends StatelessWidget {
                               height: 24,
                               width: 24,
                               decoration: const BoxDecoration(
+
                                 image: DecorationImage(
                                   image: AssetImage(AppImages2.imagesoro),
                                 ),
@@ -297,6 +311,7 @@ class KalinPage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 30),
 
 
 
@@ -306,15 +321,20 @@ class KalinPage extends StatelessWidget {
                 const Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text("9AM",style: AppTextStyle.headline,),
+                    Text("1PM",style: AppTextStyle.headline,),
                     SizedBox(height: 50),
-                    Text("10AM",style: AppTextStyle.headline,),
+                    Text("1PM",style: AppTextStyle.headline,),
                   ],
                 ),
                 Container(
                   height: 133,
                   width: 330,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.orange),
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [Colors.pink.shade100, Colors.pink],),
+                      borderRadius: BorderRadius.circular(20),color: Colors.orange),
                   child: Padding(
                     padding: const EdgeInsets.all(20),
 
@@ -322,7 +342,7 @@ class KalinPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Information Architecture",
+                          "MobileApp Desegin",
                           style: TextStyle(
                             fontSize: 30,
                             color: Colors.white,
@@ -382,6 +402,31 @@ class KalinPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home,color: Colors.grey,),
+            activeIcon: Icon(Icons.home_filled,color: Colors.blue,),
+            label: 'Asosiy',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_month,color: Colors.grey,),
+            activeIcon: Icon(Icons.calendar_month,color: Colors.blue,),
+            label: 'Calindar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat,color: Colors.grey,),
+            activeIcon: Icon(Icons.chat,color: Colors.blue,),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person,color: Colors.grey,),
+            activeIcon: Icon(Icons.person_outline,color: Colors.blue,),
+            label: 'Profil',
+          ),
+        ],
+      ),
+
     );
   }
 }

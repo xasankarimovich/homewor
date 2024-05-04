@@ -19,7 +19,7 @@ abstract class AppTextStyle{
 
 abstract class AppImages {
   static const logo = "assets/images/xasan.jpg";
-  static const logo2 = "assets/images/firstfon.jpg";
+
 
 }
 
@@ -31,4 +31,5 @@ abstract class AppImages3 {
 abstract class AppImages2 {
   static const imagesoro = "assets/images/Oro.png";
   static const imagesSaber = "assets/images/Saber.png";
+  static const imagesmike = "assets/images/mike.png";
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:home_page_styles/homepage/home_page.dart';
-import 'package:home_page_styles/kalindarpage/kalindar_page.dart';
 import 'package:home_page_styles/workplaces_start/profile_page.dart';
 
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: KalinPage(),
+      home: HomePage(),
 
     );
   }

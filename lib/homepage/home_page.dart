@@ -250,6 +250,30 @@ class HomePage extends StatelessWidget{
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home,color: Colors.grey,),
+            activeIcon: Icon(Icons.home_filled,color: Colors.blue,),
+            label: 'Asosiy',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_month,color: Colors.grey,),
+            activeIcon: Icon(Icons.calendar_month,color: Colors.blue,),
+            label: 'Calindar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat,color: Colors.grey,),
+            activeIcon: Icon(Icons.chat,color: Colors.blue,),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person,color: Colors.grey,),
+            activeIcon: Icon(Icons.person_outline,color: Colors.blue,),
+            label: 'Profil',
+          ),
+        ],
+      ),
 
 
 

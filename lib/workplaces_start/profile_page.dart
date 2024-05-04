@@ -8,13 +8,11 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         backgroundColor: Colors.blueAccent,
       ),
       body: Column(
         children: [
           Container(
-
             child: Column(
               children: [
                 Image.asset(AppImages3.logo2),
@@ -25,16 +23,12 @@ class ProfilePage extends StatelessWidget {
             width: double.infinity,
             height: 520,
             decoration: BoxDecoration(
-              color: Colors.blueAccent,
               borderRadius: BorderRadius.only(
-
-                topLeft: Radius.circular(
-                    40
-                ),
+                topLeft: Radius.circular(40),
                 topRight: Radius.circular(40),
               ),
             ),
-            child:  Column(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -48,39 +42,50 @@ class ProfilePage extends StatelessWidget {
                 ),
                 SizedBox(height: 30),
                 Container(
-
-
                   height: 60,
                   width: 295,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),color: Colors.red,),
-                  child: Center(child: Text("Get Started",style: AppTextStyle.parapraph,)),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blue,
+                    gradient: LinearGradient(
+                      colors: Colors.accents,
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Get Started",
+                    style: AppTextStyle.parapraph,
+                  )),
                 ),
               ],
             ),
           ),
-
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            activeIcon: Icon(Icons.home_filled),
+            icon: Icon(Icons.home,color: Colors.grey,),
+            activeIcon: Icon(Icons.home_filled,color: Colors.blue,),
             label: 'Asosiy',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            activeIcon: Icon(Icons.search_rounded),
-            label: 'Qidirish',
+            icon: Icon(Icons.calendar_month,color: Colors.grey,),
+            activeIcon: Icon(Icons.calendar_month,color: Colors.blue,),
+            label: 'Calindar',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            activeIcon: Icon(Icons.person_outline),
+            icon: Icon(Icons.chat,color: Colors.grey,),
+            activeIcon: Icon(Icons.chat,color: Colors.blue,),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person,color: Colors.grey,),
+            activeIcon: Icon(Icons.person_outline,color: Colors.blue,),
             label: 'Profil',
           ),
         ],
       ),
     );
-
   }
 }
